@@ -1,0 +1,26 @@
+name: CloudSystemBungee
+author: konrad2002
+version: 0.1
+main: net.grexcraft.cloud.CloudSystemPlugin
+api-version: 1.19
+permissions:
+  grexcraft.cloud.*:
+    description: access to all "/cloud" commands
+    children:
+      grexcraft.cloud.register: true
+      grexcraft.cloud.remove: true
+  grexcraft.cloud.register:
+    description: allows you to use the "/cloudregister" command
+    default: false
+  grexcraft.cloud.remove:
+    description: allows you to use the "/cloudremove" command
+    default: false
+commands:
+  cloudregister:
+    description: Registers a new minecraft server to the bungee
+    usage: /cloudregister <name> <host> [port]
+    permission: grexcraft.cloud.register
+  cloudremove:
+    description: Removes a minecraft server from bungee
+    usage: /cloudremove <name>
+    permission: grexcraft.cloud.remove
