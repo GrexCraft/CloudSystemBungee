@@ -1,4 +1,4 @@
-package net.grexcraft.cloud;
+package net.grexcraft.cloud_bungee;
 
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.config.ServerInfo;
@@ -8,6 +8,7 @@ import java.net.InetSocketAddress;
 public class ServerManager {
 
     public void register(String name, String ip, int port) {
+        if (port == 0) port = 25565;
         InetSocketAddress address = new InetSocketAddress(ip, port);
 
         ServerInfo info = ProxyServer.getInstance().constructServerInfo(name, address, "server in cloud", false);

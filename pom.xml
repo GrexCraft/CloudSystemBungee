@@ -13,7 +13,7 @@
     </distributionManagement>
 
     <groupId>net.grexcraft</groupId>
-    <artifactId>cloud</artifactId>
+    <artifactId>cloud_bungee</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>

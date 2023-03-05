@@ -1,6 +1,6 @@
-package net.grexcraft.cloud.command;
+package net.grexcraft.cloud_bungee.command;
 
-import net.grexcraft.cloud.ServerManager;
+import net.grexcraft.cloud_bungee.ServerManager;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.chat.ComponentBuilder;

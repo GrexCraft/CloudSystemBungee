@@ -1,17 +1,13 @@
-package net.grexcraft.cloud;
+package net.grexcraft.cloud_bungee;
 
-import net.grexcraft.cloud.command.RegisterCommand;
-import net.grexcraft.cloud.command.RemoveCommand;
+import net.grexcraft.cloud_bungee.command.RegisterCommand;
+import net.grexcraft.cloud_bungee.command.RemoveCommand;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.plugin.Plugin;
 
 public class CloudSystemPlugin extends Plugin {
 
     private ServerManager serverManager;
-
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
-    }
 
     @Override
     public void onEnable() {
