@@ -9,11 +9,8 @@ import net.md_5.bungee.api.plugin.Command;
 
 public class RegisterCommand extends Command {
 
-    ServerManager serverManager;
-
-    public RegisterCommand(ServerManager serverManager) {
+    public RegisterCommand() {
         super("cloudregister");
-        this.serverManager = serverManager;
     }
 
     @Override
@@ -31,6 +28,6 @@ public class RegisterCommand extends Command {
             player.sendMessage(new ComponentBuilder("Adding Server: '" + name + "' at '" + address + ":" + port + "'").color(ChatColor.GREEN).create());
         }
 
-        serverManager.register(name, address, port);
+        ServerManager.register(name, address, port);
     }
 }

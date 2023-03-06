@@ -9,11 +9,8 @@ import net.md_5.bungee.api.plugin.Command;
 
 public class RemoveCommand extends Command {
 
-    ServerManager serverManager;
-
-    public RemoveCommand(ServerManager serverManager) {
+    public RemoveCommand() {
         super("cloudremove");
-        this.serverManager = serverManager;
     }
 
     @Override
@@ -26,6 +23,6 @@ public class RemoveCommand extends Command {
             player.sendMessage(new ComponentBuilder("Removing Server: '" + name + "'").color(ChatColor.GOLD).create());
         }
 
-        serverManager.remove(name);
+        ServerManager.remove(name);
     }
 }
