@@ -1,6 +1,6 @@
 package net.grexcraft.cloud_bungee.listener;
 
-import net.grexcraft.cloud_bungee.ServerManager;
+import net.grexcraft.cloud_bungee.manager.ServerManager;
 import net.grexcraft.cloud_bungee.model.RedisBungeeEventData;
 import redis.clients.jedis.JedisPubSub;
 

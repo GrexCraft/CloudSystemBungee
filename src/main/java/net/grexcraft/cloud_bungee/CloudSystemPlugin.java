@@ -2,7 +2,8 @@ package net.grexcraft.cloud_bungee;
 
 import net.grexcraft.cloud_bungee.command.RegisterCommand;
 import net.grexcraft.cloud_bungee.command.RemoveCommand;
-import net.grexcraft.cloud_bungee.jedis.JedisManager;
+import net.grexcraft.cloud_bungee.command.StartCommand;
+import net.grexcraft.cloud_bungee.manager.JedisManager;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.plugin.Plugin;
 
@@ -14,9 +15,10 @@ public class CloudSystemPlugin extends Plugin {
 
         initCommands();
 
-        System.out.println("GrexCraft CloudSystemPlugin started!");
+        System.out.println("GrexCraft CloudSystemBungee starting...");
 
-        JedisManager.start();
+        JedisManager.getInstance().start();
+        //JedisManager.getInstance().subscribe();
         System.out.println("after starting jedis");
 
     }
@@ -24,6 +26,7 @@ public class CloudSystemPlugin extends Plugin {
     private void initCommands() {
         ProxyServer.getInstance().getPluginManager().registerCommand(this, new RegisterCommand());
         ProxyServer.getInstance().getPluginManager().registerCommand(this, new RemoveCommand());
+        ProxyServer.getInstance().getPluginManager().registerCommand(this, new StartCommand());
     }
 
 

@@ -9,11 +9,15 @@ permissions:
     children:
       grexcraft.cloud.register: true
       grexcraft.cloud.remove: true
+      grexcraft.cloud.start: true
   grexcraft.cloud.register:
     description: allows you to use the "/cloudregister" command
     default: false
   grexcraft.cloud.remove:
     description: allows you to use the "/cloudremove" command
+    default: false
+  grexcraft.cloud.start:
+    description: allows you to use the "/cloudstart" command
     default: false
 commands:
   cloudregister:
@@ -24,3 +28,7 @@ commands:
     description: Removes a minecraft server from bungee
     usage: /cloudremove <name>
     permission: grexcraft.cloud.remove
+  cloudstart:
+    description: Starts a minecraft server by image
+    usage: /cloudstart <image> <tag>
+    permission: grexcraft.cloud.start

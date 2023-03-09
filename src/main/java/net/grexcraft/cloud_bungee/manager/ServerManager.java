@@ -1,4 +1,4 @@
-package net.grexcraft.cloud_bungee;
+package net.grexcraft.cloud_bungee.manager;
 
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.config.ServerInfo;

@@ -14,6 +14,7 @@ public class RedisBungeeEventData implements Serializable {
         REGISTER, REMOVE
     }
 
+    private Long id;
     private String name;
     private String hostname;
     private int port;
