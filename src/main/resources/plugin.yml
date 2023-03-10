@@ -19,6 +19,9 @@ permissions:
   grexcraft.cloud.start:
     description: allows you to use the "/cloudstart" command
     default: false
+  grexcraft.cloud.update_images:
+    description: allows you to use the "/cloudupdateimages" command
+    default: false
 commands:
   cloudregister:
     description: Registers a new minecraft server to the bungee
@@ -32,3 +35,7 @@ commands:
     description: Starts a minecraft server by image
     usage: /cloudstart <image> <tag>
     permission: grexcraft.cloud.start
+  cloudupdateimages:
+    description: update internal image list
+    usage: /cloudupdateimages
+    permission: grexcraft.cloud.update_images
