@@ -1,7 +1,8 @@
 package net.grexcraft.cloud_bungee.client;
 
-import net.grexcraft.cloud_bungee.dto.ImageDto;
-import net.grexcraft.cloud_bungee.model.CreateServerRequest;
+import net.grexcraft.cloud.core.dto.ImageDto;
+import net.grexcraft.cloud.core.dto.ServerDto;
+import net.grexcraft.cloud.core.request.CreateServerRequest;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -37,5 +38,14 @@ public class CloudWebClient {
 
     public static List<ImageDto> getImages() {
         return images;
+    }
+
+    public static List<ServerDto> getServers() {
+        Mono<List<ServerDto>> response = client.get()
+                .uri("/api/v1/server/")
+                .retrieve()
+                .bodyToMono(new ParameterizedTypeReference<>() {});
+
+        return response.block();
     }
 }

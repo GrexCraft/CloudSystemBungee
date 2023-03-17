@@ -1,9 +1,12 @@
 package net.grexcraft.cloud_bungee.manager;
 
+import net.grexcraft.cloud.core.dto.ServerDto;
+import net.grexcraft.cloud.core.enums.ServerState;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.config.ServerInfo;
 
 import java.net.InetSocketAddress;
+import java.util.List;
 
 public class ServerManager {
 
@@ -21,5 +24,17 @@ public class ServerManager {
         ProxyServer.getInstance().getServers().remove(name);
         System.out.println("[CloudSystem] Removed server " + name);
 
+    }
+
+    public static void registerAllCurrentServers(List<ServerDto> servers) {
+        for (ServerDto server : servers) {
+            if (server.getState().equals(ServerState.STOPPED) || server.getState().equals(ServerState.STOPPING)) {
+                continue;
+            }
+
+            if (server.getState().equals(ServerState.RUNNING)) {
+                register(server.getName(), server.getAddress(), 0);
+            }
+        }
     }
 }

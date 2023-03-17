@@ -1,9 +1,9 @@
 package net.grexcraft.cloud_bungee.command;
 
 import com.google.common.collect.ImmutableSet;
-import net.grexcraft.cloud.core.dto.ImageDto;
 import net.grexcraft.cloud.core.request.CreateServerRequest;
 import net.grexcraft.cloud_bungee.client.CloudWebClient;
+import net.grexcraft.cloud.core.dto.ImageDto;
 import net.grexcraft.cloud_bungee.helper.MessageHelper;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
@@ -16,10 +16,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class StartCommand extends Command implements TabExecutor {
+public class StopCommand extends Command implements TabExecutor {
 
-    public StartCommand() {
-        super("cloudstart", "grexcraft.cloud.start");
+    public StopCommand() {
+        super("cloudstop", "grexcraft.cloud.stop");
         CloudWebClient.fetchImages();
     }
 
