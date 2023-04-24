@@ -16,7 +16,7 @@
                     <url>https://repo1.maven.org/maven2</url>
                 </repository>
                 <repository>
-                    <id>github_plugin</id>
+                    <id>github_bungee</id>
                     <url>https://maven.pkg.github.com/GrexCraft/CloudSystemBungee</url>
                     <snapshots>
                         <enabled>true</enabled>

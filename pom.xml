@@ -8,7 +8,7 @@
         <repository>
             <id>github</id>
             <name>GitHub GrexCraft Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/GrexCraft/BLUB</url>
+            <url>https://maven.pkg.github.com/GrexCraft/CloudSystemBungee</url>
         </repository>
     </distributionManagement>
 
