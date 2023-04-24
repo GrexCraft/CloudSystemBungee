@@ -16,14 +16,14 @@
                     <url>https://repo1.maven.org/maven2</url>
                 </repository>
                 <repository>
-                    <id>github</id>
+                    <id>github_plugin</id>
                     <url>https://maven.pkg.github.com/GrexCraft/CloudSystemBungee</url>
                     <snapshots>
                         <enabled>true</enabled>
                     </snapshots>
                 </repository>
                 <repository>
-                    <id>github-service</id>
+                    <id>github_service</id>
                     <url>https://maven.pkg.github.com/GrexCraft/CloudSystemService</url>
                     <snapshots>
                         <enabled>true</enabled>
@@ -36,11 +36,6 @@
     <servers>
         <server>
             <id>github</id>
-            <username>${env.GITHUB_USERNAME}</username>
-            <password>${env.GITHUB_TOKEN}</password>
-        </server>
-        <server>
-            <id>github-service</id>
             <username>${env.GITHUB_USERNAME}</username>
             <password>${env.GITHUB_TOKEN}</password>
         </server>
