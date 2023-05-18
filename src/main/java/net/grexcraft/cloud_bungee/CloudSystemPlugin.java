@@ -1,5 +1,6 @@
 package net.grexcraft.cloud_bungee;
 
+import net.grexcraft.cloud.core.dto.PoolSlotDto;
 import net.grexcraft.cloud.core.dto.ServerDto;
 import net.grexcraft.cloud_bungee.client.CloudWebClient;
 import net.grexcraft.cloud_bungee.command.*;
@@ -26,6 +27,9 @@ public class CloudSystemPlugin extends Plugin {
 
         List<ServerDto> servers = CloudWebClient.getServers();
         ServerManager.registerAllCurrentServers(servers);
+
+        List<PoolSlotDto> slots = CloudWebClient.getPoolSlots();
+        ServerManager.registerAllCurrentSlots(slots);
 
     }
 

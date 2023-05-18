@@ -1,5 +1,6 @@
 package net.grexcraft.cloud_bungee.manager;
 
+import net.grexcraft.cloud.core.dto.PoolSlotDto;
 import net.grexcraft.cloud.core.dto.ServerDto;
 import net.grexcraft.cloud.core.enums.ServerState;
 import net.md_5.bungee.api.ProxyServer;
@@ -34,6 +35,20 @@ public class ServerManager {
 
             if (server.getState().equals(ServerState.RUNNING)) {
                 register(server.getName(), server.getAddress(), 0);
+            }
+        }
+    }
+
+    public static void registerAllCurrentSlots(List<PoolSlotDto> slots) {
+        for (PoolSlotDto slot : slots) {
+            if (slot.getServer() == null) continue;
+            ServerDto server = slot.getServer();
+            if (server.getState().equals(ServerState.STOPPED) || server.getState().equals(ServerState.STOPPING)) {
+                continue;
+            }
+
+            if (server.getState().equals(ServerState.RUNNING)) {
+                register(slot.getName(), server.getAddress(), 0);
             }
         }
     }
