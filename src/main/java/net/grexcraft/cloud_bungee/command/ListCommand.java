@@ -15,7 +15,7 @@ import java.util.List;
 public class ListCommand extends Command {
 
     public ListCommand() {
-        super("list", "grexcraft.cloud.list");
+        super("list", "grexcraft.list");
     }
 
     @Override

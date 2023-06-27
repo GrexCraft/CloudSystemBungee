@@ -42,6 +42,8 @@ public class CloudSystemPlugin extends Plugin {
         ProxyServer.getInstance().getPluginManager().registerCommand(this, new StartCommand());
         ProxyServer.getInstance().getPluginManager().registerCommand(this, new UpdateImagesCommand());
         ProxyServer.getInstance().getPluginManager().registerCommand(this, new ListCommand());
+        ProxyServer.getInstance().getPluginManager().registerCommand(this, new CloudListCommand());
+        ProxyServer.getInstance().getPluginManager().registerCommand(this, new CloudInfoCommand());
     }
 
     private void registerListener() {

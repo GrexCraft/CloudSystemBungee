@@ -8,7 +8,7 @@ import net.md_5.bungee.event.EventHandler;
 import net.md_5.bungee.event.EventPriority;
 
 public class ProxyPingListener implements Listener {
-    private final String motd = "          &7----[&6&lGrex&c&lCraft &81.8-1.19&7&7]----&r\\n          &7TTT, Skyblock, KitPvP and more...";
+    private final String motd = "          &7----[&6&lGrex&c&lCraft &81.8-1.20&7&7]----&r\\n          &7TTT, Skyblock, KitPvP and more...";
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onPing(ProxyPingEvent e){
         ServerPing serverPing = e.getResponse();

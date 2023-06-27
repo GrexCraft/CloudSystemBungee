@@ -10,8 +10,16 @@ permissions:
       grexcraft.cloud.register: true
       grexcraft.cloud.remove: true
       grexcraft.cloud.start: true
+      grexcraft.cloud.list: true
+      grexcraft.cloud.info: true
   grexcraft.cloud.register:
     description: allows you to use the "/cloudregister" command
+    default: false
+  grexcraft.cloud.list:
+    description: allows you to use the "/cloudlist" command
+    default: false
+  grexcraft.cloud.info:
+    description: allows you to use the "/cloudinfo" command
     default: false
   grexcraft.cloud.remove:
     description: allows you to use the "/cloudremove" command
@@ -27,6 +35,14 @@ commands:
     description: Registers a new minecraft server to the bungee
     usage: /cloudregister <name> <host> [port]
     permission: grexcraft.cloud.register
+  cloudlist:
+    description: Lists all minecraft servers the cloud service knows
+    usage: /cloudlist
+    permission: grexcraft.cloud.list
+  cloudinfo:
+    description: Give info about a server
+    usage: /cloudinfo <server>
+    permission: grexcraft.cloud.info
   cloudremove:
     description: Removes a minecraft server from bungee
     usage: /cloudremove <name>
